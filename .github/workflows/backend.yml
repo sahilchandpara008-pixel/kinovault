@@ -27,6 +27,6 @@ jobs:
       - name: Link project
         run: supabase link --project-ref "$PROJECT_REF"
       - name: Apply database migrations
-        run: supabase db push --yes
+        run: supabase db push
       - name: Deploy edge functions
         run: supabase functions deploy ${{ inputs.functions }} --project-ref "$PROJECT_REF"
