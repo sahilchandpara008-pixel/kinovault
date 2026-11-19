@@ -1,0 +1,32 @@
+name: Deploy backend (Supabase)
+
+# Run by hand: Actions -> "Deploy backend (Supabase)" -> Run workflow.
+# Needs two repository secrets (Settings -> Secrets and variables -> Actions):
+#   SUPABASE_ACCESS_TOKEN  from supabase.com/dashboard/account/tokens
+#   SUPABASE_DB_PASSWORD   the Kinovault project's database password
+on:
+  workflow_dispatch:
+    inputs:
+      functions:
+        description: "Edge functions to deploy (space separated). Bunny ones are left out until Bunny is set up."
+        default: "upi-webhook delete-account play-report"
+
+env:
+  SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+  SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+  PROJECT_REF: scefwcqacstzrfayjjsh
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+      - name: Link project
+        run: supabase link --project-ref "$PROJECT_REF"
+      - name: Apply database migrations
+        run: supabase db push --yes
+      - name: Deploy edge functions
+        run: supabase functions deploy ${{ inputs.functions }} --project-ref "$PROJECT_REF"
