@@ -1,8 +1,9 @@
 name: Supabase deploy
 
+# Manual only for now (it also pushes Bunny secrets). Use "Deploy backend (Supabase)"
+# until Bunny is set up.
 on:
-  push:
-    paths: ["supabase/migrations/**", "supabase/functions/**", ".github/workflows/supabase-deploy.yml"]
+  workflow_dispatch:
 
 jobs:
   deploy:
