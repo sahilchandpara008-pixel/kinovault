@@ -1299,5 +1299,8 @@ reset role;
 select t.ok(not exists (select 1 from public.installs
                          where install_id = '30000000-0000-0000-0000-000000000003' and geo_blocked),
             'old install row not flagged afterwards');
+-- Every table the app can reach is protected by Row Level Security.
+select t.ok(not exists (select 1 from pg_tables where schemaname = 'public' and not rowsecurity),
+            'RLS is on for every public table');
 \echo
 \echo 'All tests passed.'

@@ -45,7 +45,13 @@ export default async function PanelLayout({ children }: { children: React.ReactN
               { href: "/meta", label: "Meta Pixel", icon: "◎" },
             ],
           },
-          { label: "Settings", items: [{ href: "/admins", label: "Admins", icon: "⚙" }] },
+          {
+            label: "Settings",
+            items: [
+              { href: "/admins", label: "Admins", icon: "♔" },
+              { href: "/settings", label: "General", icon: "⚙" },
+            ],
+          },
         ]
       : []),
   ];
