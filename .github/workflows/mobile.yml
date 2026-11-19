@@ -5,6 +5,9 @@ on:
     paths: ["mobile/**", ".github/workflows/mobile.yml"]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   apk:
     runs-on: ubuntu-24.04
@@ -58,3 +61,14 @@ jobs:
             dist/*.apk
             dist/*.aab
           retention-days: 30
+
+      # A public download link for each build on main (Releases page).
+      - name: Publish release
+        if: github.ref == 'refs/heads/main'
+        working-directory: .
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "build-${{ github.run_number }}" dist/*.apk dist/*.aab \
+            --title "Veltora build ${{ github.run_number }}" \
+            --notes "Built from ${{ github.sha }}." --latest
