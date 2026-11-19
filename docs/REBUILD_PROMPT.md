@@ -1,6 +1,6 @@
-# Kinovault — full rebuild prompt
+# Veltora — full rebuild prompt
 
-Paste everything below the line into an AI coding agent to rebuild Kinovault
+Paste everything below the line into an AI coding agent to rebuild Veltora
 from scratch. It describes the product exactly as it runs today. No secrets
 are included; you supply your own keys where marked `<…>`.
 
@@ -8,12 +8,12 @@ are included; you supply your own keys where marked `<…>`.
 
 ## 0. What to build
 
-Build **Kinovault**, an Indian video-channel + cloud-storage app with:
+Build **Veltora**, an Indian video-channel + cloud-storage app with:
 
 1. A **Flutter Android app** (one codebase, three builds):
-   - **Organic APK** (shared yourself, package `com.kinovault.direct`)
-   - **Ads APK** (shared from Meta ads, package `com.kinovault.direct`, marks every install as a Meta-ads install)
-   - **Google Play AAB** (package `com.kinovault.app`, with UPI plans via Google Play "alternative billing only")
+   - **Organic APK** (shared yourself, package `com.veltora.direct`)
+   - **Ads APK** (shared from Meta ads, package `com.veltora.direct`, marks every install as a Meta-ads install)
+   - **Google Play AAB** (package `com.veltora.app`, with UPI plans via Google Play "alternative billing only")
 2. A **Supabase backend** (Postgres + Auth + Storage + Edge Functions + pg_cron + pg_net). All business rules live in the database (RLS + `security definer` functions), so the app can never bypass them.
 3. A **Next.js admin panel + public website** on Vercel (admin login, public download page, privacy/terms/delete-account/report-content pages).
 4. **Bunny Stream** for video hosting (main video + preview/trailer), Supabase Storage for images and user cloud files.
@@ -36,7 +36,7 @@ Work rule: build stage by stage, write database tests for every rule, and never 
 
 ## 2. Brand
 
-- Name **Kinovault**, tagline "Cloud & Channel".
+- Name **Veltora**, tagline "Cloud & Channel".
 - Colours: brand orange `#FF7A1A`, dark orange `#E25A00`, near-black backgrounds `#0B0B0D / #16161A / #1F1F25`. Red only for destructive actions and errors.
 - Logo: orange cloud with a white up-arrow on a dark rounded square (1024×1024 for stores, favicon from the same file).
 
@@ -137,8 +137,8 @@ Plans (example): Trial ₹49/3 days, Silver ₹129/7, Gold ₹259/30, Platinum �
 
 ## 7. Meta tracking (server-side Conversions API, app events)
 
-- Meta for Developers app (Business type, Android platform: package `com.kinovault.app`, class `<MainActivity>`, key hash from the Play **app signing** SHA-1 → base64, privacy/terms/data-deletion URLs, category Entertainment, Live mode), linked to the Business portfolio and ad account; the Pixel/dataset is **linked to the app** in Events Manager.
-- `meta_settings` (pixel_id, access_token, action_source `app`, app_package `com.kinovault.app`, enabled), owner-only RLS; the token never reaches the app.
+- Meta for Developers app (Business type, Android platform: package `com.veltora.app`, class `<MainActivity>`, key hash from the Play **app signing** SHA-1 → base64, privacy/terms/data-deletion URLs, category Entertainment, Live mode), linked to the Business portfolio and ad account; the Pixel/dataset is **linked to the app** in Events Manager.
+- `meta_settings` (pixel_id, access_token, action_source `app`, app_package `com.veltora.app`, enabled), owner-only RLS; the token never reaches the app.
 - Triggers enqueue `meta_events`, pg_cron `meta-dispatch` every minute posts them with pg_net to `https://graph.facebook.com/v21.0/<pixel>/events`:
   - `AppInstall` (first launch), `CompleteRegistration` (guest → account), `ViewContent` (video/trailer opened), `InitiateCheckout` (order created, value = plan price), `Purchase` + `Subscribe` (after approval, value = amount, INR, `event_id` = order id so Meta dedupes).
 - `user_data`: SHA-256 external_id (user or install id), SHA-256 email, country `in`, client IP + user agent, fbc/fbp from ad clicks. `app_data`: `advertiser_tracking_enabled`, `application_tracking_enabled`, `extinfo` (`a2`, package, …).
@@ -161,7 +161,7 @@ Rules:
 
 ## 9. Android builds (CI)
 
-- Flavors: `direct` (package `com.kinovault.direct`, no Google code, UPI only) and `play` (package `com.kinovault.app`).
+- Flavors: `direct` (package `com.veltora.direct`, no Google code, UPI only) and `play` (package `com.veltora.app`).
 - Outputs:
   - **Organic APK:** `flutter build apk --release --flavor direct`
   - **Ads APK:** `flutter build apk --release --flavor direct --dart-define=APK_REFERRER="utm_source=meta&utm_medium=paid_social&utm_campaign=apk_download"`

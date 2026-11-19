@@ -14,7 +14,7 @@ const _reasons = [
   'Other',
 ];
 
-/// Report a post or a channel. Reports reach the Kinovault team (admin panel).
+/// Report a post or a channel. Reports reach the Veltora team (admin panel).
 Future<void> reportContent(
   BuildContext context, {
   String? postId,

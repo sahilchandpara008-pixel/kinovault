@@ -16,9 +16,9 @@ class Config {
   static const apkReferrer = String.fromEnvironment('APK_REFERRER');
 
   static const policyVersion = 'v2';
-  static const appName = 'Kinovault';
-  static const supportEmail = 'info.kinovault@gmail.com';
-  static const website = 'https://kinovault-app.vercel.app';
+  static const appName = 'Veltora';
+  static const supportEmail = 'info.veltora@gmail.com';
+  static const website = 'https://veltora-app.vercel.app';
   static const maxUploadBytes = 50 * 1024 * 1024; // Supabase free plan limit
 
   static String publicUrl(String key) =>

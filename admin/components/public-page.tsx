@@ -9,7 +9,7 @@ export function PublicPage({ title, children }: { title: string; children: React
       <header className="border-b border-gray-200">
         <div className="mx-auto flex max-w-2xl items-center gap-2 px-5 py-4">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#7C5CFF] text-sm font-black text-white">F</div>
-          <Link href="/d" className="font-semibold">Kinovault</Link>
+          <Link href="/d" className="font-semibold">Veltora</Link>
         </div>
       </header>
       <main className="mx-auto max-w-2xl px-5 py-8">

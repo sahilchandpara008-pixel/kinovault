@@ -34,13 +34,13 @@ jobs:
         run: |
           flutter build apk --release --flavor direct
           mkdir -p ../dist
-          cp build/app/outputs/flutter-apk/app-direct-release.apk ../dist/Kinovault.apk
+          cp build/app/outputs/flutter-apk/app-direct-release.apk ../dist/Veltora.apk
 
       - name: Build ads APK (Meta)
         run: |
           flutter build apk --release --flavor direct \
             --dart-define=APK_REFERRER="utm_source=meta&utm_medium=paid_social&utm_campaign=apk_download"
-          cp build/app/outputs/flutter-apk/app-direct-release.apk ../dist/Kinovault-ads.apk
+          cp build/app/outputs/flutter-apk/app-direct-release.apk ../dist/Veltora-ads.apk
 
       # Google Play build (upload to Play Console). Owner's decision (Nov 2026):
       # it shows the plans and takes the same UPI payment as the shared APKs.
@@ -49,11 +49,11 @@ jobs:
       - name: Build Play Store bundle
         run: |
           flutter build appbundle --release --flavor play --dart-define=PLAY_STORE=true --dart-define=PLAY_SELLS_UPI=true
-          cp build/app/outputs/bundle/playRelease/app-play-release.aab ../dist/Kinovault-play.aab
+          cp build/app/outputs/bundle/playRelease/app-play-release.aab ../dist/Veltora-play.aab
 
       - uses: actions/upload-artifact@v4
         with:
-          name: Kinovault-apks
+          name: Veltora-apks
           path: |
             dist/*.apk
             dist/*.aab

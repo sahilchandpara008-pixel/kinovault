@@ -12,7 +12,7 @@ type Config = { pixel_id: string | null; apk_url: string | null; title: string; 
 
 async function config(): Promise<Config> {
   const { data } = await createPublicClient().rpc("download_page_config");
-  return (data as Config | null) ?? { pixel_id: null, apk_url: null, title: "Kinovault", subtitle: "" };
+  return (data as Config | null) ?? { pixel_id: null, apk_url: null, title: "Veltora", subtitle: "" };
 }
 
 export async function generateMetadata(): Promise<Metadata> {

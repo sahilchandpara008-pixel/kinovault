@@ -53,7 +53,7 @@ export function Nav({ groups }: { groups: NavGroup[] }) {
   );
 }
 
-// "Kinovault / Admin / Posts" strip above every page.
+// "Veltora / Admin / Posts" strip above every page.
 export function Breadcrumb({ groups }: { groups: NavGroup[] }) {
   const pathname = usePathname();
   const current = groups.flatMap((g) => g.items).find((i) => isActive(pathname, i.href));

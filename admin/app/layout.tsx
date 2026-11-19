@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kinovault Admin",
+  title: "Veltora Admin",
   description: "Manage channels, content, users and approvals",
 };
 

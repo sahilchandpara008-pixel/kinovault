@@ -99,7 +99,7 @@ Google sign-in needs, once, in the Supabase dashboard:
   and Client Secret of a Google Cloud OAuth client (type "Web application" whose
   Authorized redirect URI is `https://YOUR_PROJECT_REF.supabase.co/auth/v1/callback`).
 - Authentication → URL Configuration → Redirect URLs: add
-  `kinovault://login-callback` (also used by password-reset emails).
+  `veltora://login-callback` (also used by password-reset emails).
 
 Until Google is enabled, the app shows "Google sign-in is coming soon. Please log
 in with email." (It switches on by itself once Google is enabled in Supabase.)
@@ -115,7 +115,7 @@ Before real users (emails needed for confirmation and Forgot password):
   Resend, or Gmail with an app password). The built-in sender only allows a few
   emails per hour and may only deliver to your team's addresses.
 - Authentication → URL Configuration → Redirect URLs: add
-  `kinovault://login-callback` so confirmation and password-reset
+  `veltora://login-callback` so confirmation and password-reset
   links open the app.
 - Then you can turn **Confirm email** back ON.
 

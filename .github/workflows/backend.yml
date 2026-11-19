@@ -3,7 +3,7 @@ name: Deploy backend (Supabase)
 # Run by hand: Actions -> "Deploy backend (Supabase)" -> Run workflow.
 # Needs two repository secrets (Settings -> Secrets and variables -> Actions):
 #   SUPABASE_ACCESS_TOKEN  from supabase.com/dashboard/account/tokens
-#   SUPABASE_DB_PASSWORD   the Kinovault project's database password
+#   SUPABASE_DB_PASSWORD   the Veltora project's database password
 on:
   workflow_dispatch:
     inputs:

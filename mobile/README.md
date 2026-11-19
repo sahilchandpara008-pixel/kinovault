@@ -1,4 +1,4 @@
-# Kinovault — Android app
+# Veltora — Android app
 
 Flutter app (Android) on Supabase.
 
@@ -23,14 +23,14 @@ What each user sees is decided by the database (audience, premium, approvals).
 
 | File | Install source recorded |
 |---|---|
-| `Kinovault.apk` | organic (`direct`) |
-| `Kinovault-ads.apk` | Meta ads (`utm_source=meta…`, via `--dart-define=APK_REFERRER=…`) |
+| `Veltora.apk` | organic (`direct`) |
+| `Veltora-ads.apk` | Meta ads (`utm_source=meta…`, via `--dart-define=APK_REFERRER=…`) |
 
-Same package name (`com.kinovault.direct`) and the same signing key, so either one
+Same package name (`com.veltora.direct`) and the same signing key, so either one
 updates the other. The key in `android/app/tester-release.jks` is for **testing only**.
 
 GitHub Actions (`.github/workflows/mobile.yml`) builds both on every push and
-uploads them as the **Kinovault-apks** artifact on the workflow run.
+uploads them as the **Veltora-apks** artifact on the workflow run.
 
 ## Build locally
 

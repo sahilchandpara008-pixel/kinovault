@@ -58,7 +58,7 @@ Supabase as Edge Function secrets on every push to `supabase/**`:
 | Secret | Value | Where to find it |
 |---|---|---|
 | `SUPABASE_ACCESS_TOKEN` | a Supabase personal access token | Supabase dashboard -> Account -> Access Tokens |
-| `SUPABASE_PROJECT_REF` | `YOUR_PROJECT_REF` | your Kinovault Supabase project ref |
+| `SUPABASE_PROJECT_REF` | `YOUR_PROJECT_REF` | your Veltora Supabase project ref |
 | `SUPABASE_DB_PASSWORD` | the project's database password | Supabase dashboard -> Project Settings -> Database |
 | `BUNNY_STREAM_LIBRARY_ID` | the Stream library's numeric id | Bunny dashboard -> Stream -> your library -> API |
 | `BUNNY_STREAM_API_KEY` | the Stream library's API key | same page |
