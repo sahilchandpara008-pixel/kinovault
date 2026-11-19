@@ -2,13 +2,13 @@
 class Config {
   static const supabaseUrl = String.fromEnvironment(
     'SUPABASE_URL',
-    defaultValue: 'https://YOUR_PROJECT_REF.supabase.co',
+    defaultValue: 'https://scefwcqacstzrfayjjsh.supabase.co',
   );
 
   // Publishable key: safe to ship in the app, access is enforced by the database.
   static const supabaseKey = String.fromEnvironment(
     'SUPABASE_KEY',
-    defaultValue: 'sb_publishable_REPLACE_ME',
+    defaultValue: 'sb_publishable_faYNo56tBddGrlCPsGEQcA_h0w5A0XJ',
   );
 
   // Set only in the ads APK build, e.g.
