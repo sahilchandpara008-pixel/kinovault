@@ -64,7 +64,7 @@ export async function connectMeta(formData: FormData) {
   }
   if (!token) redirect(withMessage("/meta", "error", "Paste the Conversions API access token."));
 
-  const website = /^https?:\/\//.test(origin) ? `${origin}/d` : "https://veltora-app.vercel.app/d";
+  const website = /^https?:\/\//.test(origin) ? `${origin}/d` : "https://veltora-app-cs-a69d.vercel.app/d";
   const check = await checkWithMeta(pixel, token, website);
   if (check !== "ok" && check !== null) {
     redirect(withMessage("/meta", "error", `Meta did not accept this Pixel ID and token: ${check}`));

@@ -18,7 +18,7 @@ class Config {
   static const policyVersion = 'v2';
   static const appName = 'Veltora';
   static const supportEmail = 'info.veltora@gmail.com';
-  static const website = 'https://veltora-app.vercel.app';
+  static const website = 'https://veltora-app-cs-a69d.vercel.app';
   static const maxUploadBytes = 50 * 1024 * 1024; // Supabase free plan limit
 
   static String publicUrl(String key) =>
