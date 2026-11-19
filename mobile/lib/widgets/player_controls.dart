@@ -503,7 +503,7 @@ class _PremiumPlayerControlsState extends State<PremiumPlayerControls> {
                                     0x66FFFFFF,
                                   ),
                                   thumbColor: Colors.white,
-                                  overlayColor: const Color(0x33FF7A1A),
+                                  overlayColor: const Color(0x337C5CFF),
                                   thumbShape: RoundSliderThumbShape(
                                     enabledThumbRadius: _dragValue != null
                                         ? 8

@@ -8,7 +8,8 @@ export function PublicPage({ title, children }: { title: string; children: React
     <div className="min-h-screen bg-white">
       <header className="border-b border-gray-200">
         <div className="mx-auto flex max-w-2xl items-center gap-2 px-5 py-4">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#7C5CFF] text-sm font-black text-white">F</div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/site/icon.png" alt="" width={32} height={32} className="h-8 w-8 rounded-lg" />
           <Link href="/d" className="font-semibold">Kinovault</Link>
         </div>
       </header>

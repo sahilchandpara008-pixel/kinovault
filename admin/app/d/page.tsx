@@ -46,7 +46,7 @@ export default async function DownloadPage() {
         </>
       )}
 
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-80 bg-[radial-gradient(ellipse_at_top,rgba(255,122,26,0.35),transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-80 bg-[radial-gradient(ellipse_at_top,rgba(124,92,255,0.35),transparent_70%)]" />
 
       <main className="relative mx-auto flex max-w-md flex-col px-5 pb-10 pt-12">
         <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-[#7C5CFF] to-[#5B3FE0] text-4xl font-black shadow-lg">

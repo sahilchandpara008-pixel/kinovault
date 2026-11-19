@@ -72,7 +72,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-[#0B0B0D] text-white">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/site/2-cloud.jpg" alt="" className="absolute inset-0 h-full w-full object-cover opacity-25 blur-sm" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_0%,rgba(255,122,26,0.45),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_0%,rgba(124,92,255,0.45),transparent_60%)]" />
         <div className="relative mx-auto max-w-4xl px-5 py-24 text-center md:py-32">
           <p className="mx-auto mb-5 inline-block rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-semibold">Now in Early Access</p>
           <h1 className="text-5xl font-extrabold leading-[1.05] tracking-tight md:text-7xl">
@@ -92,10 +92,10 @@ export default function HomePage() {
       <section id="backup" className="mx-auto grid max-w-6xl scroll-mt-20 items-center gap-10 px-5 py-20 md:grid-cols-2">
         <div className="flex justify-center">
           <svg viewBox="0 0 220 180" className="w-60 md:w-72" aria-hidden>
-            <path d="M18 40c0-8 6-14 14-14h50l16 16h90c8 0 14 6 14 14v96c0 8-6 14-14 14H32c-8 0-14-6-14-14V40Z" fill="#9C6B5B" />
-            <path d="M18 62h184v94c0 8-6 14-14 14H32c-8 0-14-6-14-14V62Z" fill="#B07D6B" />
-            <circle cx="150" cy="118" r="44" fill="#fff" stroke="#9C6B5B" strokeWidth="8" />
-            <path d="M150 94v26l18 12" stroke="#9C6B5B" strokeWidth="8" strokeLinecap="round" fill="none" />
+            <path d="M18 40c0-8 6-14 14-14h50l16 16h90c8 0 14 6 14 14v96c0 8-6 14-14 14H32c-8 0-14-6-14-14V40Z" fill="#5B3FE0" />
+            <path d="M18 62h184v94c0 8-6 14-14 14H32c-8 0-14-6-14-14V62Z" fill="#7C5CFF" />
+            <circle cx="150" cy="118" r="44" fill="#fff" stroke="#5B3FE0" strokeWidth="8" />
+            <path d="M150 94v26l18 12" stroke="#5B3FE0" strokeWidth="8" strokeLinecap="round" fill="none" />
           </svg>
         </div>
         <div>
@@ -136,8 +136,8 @@ export default function HomePage() {
             <svg viewBox="0 0 200 220" className="w-52 md:w-64" aria-hidden>
               <path d="M100 10 180 40v62c0 56-35 92-80 108-45-16-80-52-80-108V40l80-30Z" fill="#8F72FF" />
               <path d="M100 26 166 51v51c0 46-28 77-66 91-38-14-66-45-66-91V51l66-25Z" fill="#00D1B2" />
-              <circle cx="100" cy="92" r="26" fill="#C2410C" />
-              <path d="M56 160c8-28 26-40 44-40s36 12 44 40c-12 12-28 20-44 24-16-4-32-12-44-24Z" fill="#C2410C" />
+              <circle cx="100" cy="92" r="26" fill="#5B3FE0" />
+              <path d="M56 160c8-28 26-40 44-40s36 12 44 40c-12 12-28 20-44 24-16-4-32-12-44-24Z" fill="#5B3FE0" />
             </svg>
           </div>
         </div>

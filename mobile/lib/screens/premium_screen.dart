@@ -205,7 +205,7 @@ class _PremiumScreenState extends State<PremiumScreen> with ContentReload {
                     borderRadius: BorderRadius.circular(24),
                     boxShadow: const [
                       BoxShadow(
-                        color: Color(0x40FF7A1A),
+                        color: Color(0x407C5CFF),
                         blurRadius: 24,
                         offset: Offset(0, 10),
                       ),
@@ -345,7 +345,7 @@ class _PlanCard extends StatelessWidget {
             boxShadow: selected
                 ? const [
                     BoxShadow(
-                      color: Color(0x26FF7A1A),
+                      color: Color(0x267C5CFF),
                       blurRadius: 16,
                       offset: Offset(0, 6),
                     ),

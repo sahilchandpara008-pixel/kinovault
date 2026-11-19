@@ -18,7 +18,7 @@ class AppColors {
   // Text
   static const text = Color(0xFFF4F5FB);
   static const muted = Color(0xFF9AA0B8);
-  static const ink = Color(0xFF1A1005); // text on gold/orange
+  static const ink = Color(0xFF1A1005); // text on gold
 
   // Status
   static const success = Color(0xFF00D1B2);
@@ -371,9 +371,9 @@ ThemeData buildTheme() {
       surfaceTintColor: Colors.transparent,
       elevation: 0,
       height: 64,
-      indicatorColor: const Color(0x26FF7A1A),
+      indicatorColor: const Color(0x267C5CFF),
       indicatorShape: const StadiumBorder(),
-      overlayColor: const WidgetStatePropertyAll(Color(0x14FF7A1A)),
+      overlayColor: const WidgetStatePropertyAll(Color(0x147C5CFF)),
       labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
       labelTextStyle: WidgetStateProperty.resolveWith(
         (s) => TextStyle(
