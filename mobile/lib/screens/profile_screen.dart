@@ -139,9 +139,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               begin: Alignment.topRight,
                               end: Alignment.bottomLeft,
                               colors: [
-                                Color(0xFFFF7A1A),
-                                Color(0xFF8A2D05),
-                                Color(0xFF2A1408),
+                                Color(0xFF7C5CFF),
+                                Color(0xFF2E2A7A),
+                                Color(0xFF0B0D17),
                               ],
                             ),
                           ),

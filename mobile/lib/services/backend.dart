@@ -565,7 +565,7 @@ class Backend {
     );
   }
 
-  /// Report a post or channel to the Flixvault team.
+  /// Report a post or channel to the Kinovault team.
   static Future<void> reportContent({
     String? postId,
     String? channelId,

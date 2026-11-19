@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Flixvault Admin",
+  title: "Kinovault Admin",
   description: "Manage channels, content, users and approvals",
 };
 

@@ -56,7 +56,7 @@ class MainActivity : FlutterActivity() {
             }
         }
         // Downloads (premium): Android's download manager saves the file to
-        // Downloads/Flixvault and shows a progress notification.
+        // Downloads/Kinovault and shows a progress notification.
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, DOWNLOAD_CHANNEL)
             .setMethodCallHandler { call, result ->
                 val url = call.argument<String>("url")
@@ -68,11 +68,11 @@ class MainActivity : FlutterActivity() {
                 try {
                     val request = DownloadManager.Request(Uri.parse(url))
                         .setTitle(name)
-                        .setDescription("Flixvault")
+                        .setDescription("Kinovault")
                         .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
                     call.argument<String>("mime")?.let { request.setMimeType(it) }
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "Flixvault/$name")
+                        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "Kinovault/$name")
                     } else {
                         // Android 9 and older: app folder, no storage permission needed.
                         request.setDestinationInExternalFilesDir(this, Environment.DIRECTORY_DOWNLOADS, name)

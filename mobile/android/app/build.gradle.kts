@@ -15,7 +15,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.cloudstorage.app"
+        applicationId = "com.kinovault.direct"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
@@ -47,11 +47,11 @@ android {
     flavorDimensions += "store"
     productFlavors {
         create("direct") { dimension = "store" }
-        // Play Store app id (permanent once uploaded). Shared APKs keep
-        // com.cloudstorage.app so existing installs keep updating.
+        // Play Store app id (permanent once uploaded). Shared APKs use
+        // com.kinovault.direct so they update each other.
         create("play") {
             dimension = "store"
-            applicationId = "com.flixvault.app"
+            applicationId = "com.kinovault.app"
         }
     }
 

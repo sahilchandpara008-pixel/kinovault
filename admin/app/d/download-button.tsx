@@ -56,7 +56,7 @@ export function DownloadButton({ apkUrl }: { apkUrl: string | null }) {
       type="button"
       onClick={onClick}
       disabled={!apkUrl}
-      className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#FF7A1A] px-6 py-4 text-lg font-bold text-white shadow-[0_10px_30px_-10px_rgba(255,122,26,0.8)] transition active:scale-[0.98] disabled:opacity-50"
+      className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#7C5CFF] px-6 py-4 text-lg font-bold text-white shadow-[0_10px_30px_-10px_rgba(255,122,26,0.8)] transition active:scale-[0.98] disabled:opacity-50"
     >
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={2.2} aria-hidden>
         <path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16" strokeLinecap="round" strokeLinejoin="round" />

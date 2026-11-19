@@ -27,8 +27,8 @@ async function checkWithMeta(pixel: string, token: string, pageUrl: string): Pro
               action_source: "website",
               event_source_url: pageUrl,
               user_data: {
-                external_id: [createHash("sha256").update("flixvault-admin-connect").digest("hex")],
-                client_user_agent: "FlixvaultAdmin/1.0",
+                external_id: [createHash("sha256").update("kinovault-admin-connect").digest("hex")],
+                client_user_agent: "KinovaultAdmin/1.0",
               },
               custom_data: { content_type: "test", content_ids: ["connect"] },
             },
@@ -64,7 +64,7 @@ export async function connectMeta(formData: FormData) {
   }
   if (!token) redirect(withMessage("/meta", "error", "Paste the Conversions API access token."));
 
-  const website = /^https?:\/\//.test(origin) ? `${origin}/d` : "https://flixvault-app.vercel.app/d";
+  const website = /^https?:\/\//.test(origin) ? `${origin}/d` : "https://kinovault-app.vercel.app/d";
   const check = await checkWithMeta(pixel, token, website);
   if (check !== "ok" && check !== null) {
     redirect(withMessage("/meta", "error", `Meta did not accept this Pixel ID and token: ${check}`));
@@ -73,8 +73,8 @@ export async function connectMeta(formData: FormData) {
   const update: Record<string, unknown> = {
     pixel_id: pixel,
     access_token: token,
-    // Keep action_source as set: the dataset is linked to the Flixvault app
-    // (com.flixvault.app), so events go out as app events.
+    // Keep action_source as set: the dataset is linked to the Kinovault app
+    // (com.kinovault.app), so events go out as app events.
     enabled: true,
     updated_at: new Date().toISOString(),
   };
@@ -122,7 +122,7 @@ export async function saveMetaExtras(formData: FormData) {
     .update({
       test_event_code: testCode || null,
       apk_url: apkUrl || null,
-      page_title: title || "Flixvault",
+      page_title: title || "Kinovault",
       page_subtitle: subtitle || "Premium videos, trailers and 2 TB cloud storage — all in one app.",
       updated_at: new Date().toISOString(),
     })

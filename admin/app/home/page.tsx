@@ -6,13 +6,13 @@ import { SUPPORT_EMAIL } from "@/lib/policies";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Flixvault – Free Cloud Storage & Creator Channels",
+  title: "Kinovault – Free Cloud Storage & Creator Channels",
   description:
     "Simple, secure and swift. Back up photos, videos and documents in the cloud, share them, and watch creator channels.",
   robots: { index: true },
 };
 
-const PLAY_URL = "https://play.google.com/store/apps/details?id=com.flixvault.app";
+const PLAY_URL = "https://play.google.com/store/apps/details?id=com.kinovault.app";
 
 const FREE = ["15 GB cloud storage", "Creator channels and videos", "Free trailers", "Upload & manage your own channel", "No ads, no payments"];
 
@@ -21,7 +21,7 @@ function PlayButton({ light = false }: { light?: boolean }) {
     <a
       href={PLAY_URL}
       className={`inline-flex items-center gap-2 rounded-lg px-5 py-3 font-semibold shadow-lg ${
-        light ? "bg-white text-gray-900" : "bg-[#FF7A1A] text-white"
+        light ? "bg-white text-gray-900" : "bg-[#7C5CFF] text-white"
       }`}
     >
       <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
@@ -44,14 +44,14 @@ export default function HomePage() {
           <Link href="/" className="flex items-center gap-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/site/icon.png" alt="" width={34} height={34} className="h-[34px] w-[34px] rounded-lg" />
-            <span className="text-2xl font-extrabold tracking-tight text-[#FF6A0D]">Flixvault</span>
+            <span className="text-2xl font-extrabold tracking-tight text-[#7C5CFF]">Kinovault</span>
           </Link>
           <nav className="ml-auto hidden items-center gap-7 text-sm font-medium text-gray-600 md:flex">
             <a href="#backup" className="hover:text-gray-900">Features</a>
             <a href="#security" className="hover:text-gray-900">Security</a>
             <a href="#free" className="hover:text-gray-900">Free</a>
             <Link href="/privacy" className="hover:text-gray-900">Privacy</Link>
-            <a href={PLAY_URL} className="rounded-lg bg-[#FF7A1A] px-4 py-2 text-white">Get the app</a>
+            <a href={PLAY_URL} className="rounded-lg bg-[#7C5CFF] px-4 py-2 text-white">Get the app</a>
           </nav>
           <details className="relative ml-auto md:hidden">
             <summary className="list-none rounded-lg border border-gray-200 p-2" aria-label="Menu">
@@ -62,7 +62,7 @@ export default function HomePage() {
               <a href="#security" className="block rounded-lg px-3 py-2 hover:bg-gray-50">Security</a>
               <a href="#free" className="block rounded-lg px-3 py-2 hover:bg-gray-50">Free</a>
               <Link href="/privacy" className="block rounded-lg px-3 py-2 hover:bg-gray-50">Privacy Policy</Link>
-              <a href={PLAY_URL} className="mt-1 block rounded-lg bg-[#FF7A1A] px-3 py-2 text-center font-semibold text-white">Get the app</a>
+              <a href={PLAY_URL} className="mt-1 block rounded-lg bg-[#7C5CFF] px-3 py-2 text-center font-semibold text-white">Get the app</a>
             </div>
           </details>
         </div>
@@ -106,36 +106,36 @@ export default function HomePage() {
           </p>
           <ul className="mt-6 grid gap-2 text-gray-700 sm:grid-cols-2">
             {["Photos & videos backup", "Folders for everything", "Fast upload & download", "Smooth video player"].map((t) => (
-              <li key={t} className="flex items-center gap-2"><span className="text-[#FF7A1A]">✓</span>{t}</li>
+              <li key={t} className="flex items-center gap-2"><span className="text-[#7C5CFF]">✓</span>{t}</li>
             ))}
           </ul>
         </div>
       </section>
 
       {/* Security */}
-      <section id="security" className="scroll-mt-20 bg-orange-50/60">
+      <section id="security" className="scroll-mt-20 bg-brand-50/60">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 md:grid-cols-2">
           <div className="order-2 md:order-1">
-            <h2 className="text-3xl font-bold md:text-4xl">Flixvault Protects Your Data</h2>
+            <h2 className="text-3xl font-bold md:text-4xl">Kinovault Protects Your Data</h2>
             <p className="mt-4 text-lg leading-relaxed text-gray-600">
               We prioritise your privacy and data security. Every connection is encrypted, your cloud files are private to
               your account, and you stay in control — delete your account and data any time.
             </p>
             <div className="mt-6 flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#FF7A1A] text-white">🛡️</span>
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#7C5CFF] text-white">🛡️</span>
               <div>
                 <p className="font-semibold">Keep Your Data Safe</p>
                 <p className="text-sm text-gray-500">Encrypted connections · Private files · You control deletion</p>
               </div>
             </div>
-            <Link href="/privacy" className="mt-7 inline-flex items-center gap-1 rounded-lg border border-[#FF7A1A] px-4 py-2 text-sm font-semibold text-[#E25A00] hover:bg-[#FF7A1A]/10">
+            <Link href="/privacy" className="mt-7 inline-flex items-center gap-1 rounded-lg border border-[#7C5CFF] px-4 py-2 text-sm font-semibold text-[#5B3FE0] hover:bg-[#7C5CFF]/10">
               View More Details →
             </Link>
           </div>
           <div className="order-1 flex justify-center md:order-2">
             <svg viewBox="0 0 200 220" className="w-52 md:w-64" aria-hidden>
-              <path d="M100 10 180 40v62c0 56-35 92-80 108-45-16-80-52-80-108V40l80-30Z" fill="#FF8A2A" />
-              <path d="M100 26 166 51v51c0 46-28 77-66 91-38-14-66-45-66-91V51l66-25Z" fill="#FFB066" />
+              <path d="M100 10 180 40v62c0 56-35 92-80 108-45-16-80-52-80-108V40l80-30Z" fill="#8F72FF" />
+              <path d="M100 26 166 51v51c0 46-28 77-66 91-38-14-66-45-66-91V51l66-25Z" fill="#00D1B2" />
               <circle cx="100" cy="92" r="26" fill="#C2410C" />
               <path d="M56 160c8-28 26-40 44-40s36 12 44 40c-12 12-28 20-44 24-16-4-32-12-44-24Z" fill="#C2410C" />
             </svg>
@@ -147,7 +147,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-5 py-20">
         <div className="grid items-center gap-10 md:grid-cols-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/site/1-explore.jpg" alt="Flixvault channels" className="mx-auto w-56 rounded-[2rem] border-[6px] border-gray-900 shadow-2xl" />
+          <img src="/site/1-explore.jpg" alt="Kinovault channels" className="mx-auto w-56 rounded-[2rem] border-[6px] border-gray-900 shadow-2xl" />
           <div>
             <h2 className="text-3xl font-bold md:text-4xl">Channels &amp; Creator Content</h2>
             <p className="mt-4 text-lg leading-relaxed text-gray-600">
@@ -155,11 +155,11 @@ export default function HomePage() {
               share content — and all channels are user-generated and managed, with strong safeguards:
             </p>
             <ol className="mt-5 space-y-2 text-gray-700">
-              <li><b className="text-[#FF6A0D]">1.</b> Moderation tools to review all new channels.</li>
-              <li><b className="text-[#FF6A0D]">2.</b> Approval system — every channel is reviewed before it goes live.</li>
-              <li><b className="text-[#FF6A0D]">3.</b> DMCA-compliant takedown policy with fast removal of reported content.</li>
+              <li><b className="text-[#7C5CFF]">1.</b> Moderation tools to review all new channels.</li>
+              <li><b className="text-[#7C5CFF]">2.</b> Approval system — every channel is reviewed before it goes live.</li>
+              <li><b className="text-[#7C5CFF]">3.</b> DMCA-compliant takedown policy with fast removal of reported content.</li>
             </ol>
-            <Link href="/report-content" className="mt-5 inline-block text-sm font-semibold text-[#E25A00] underline">Report content →</Link>
+            <Link href="/report-content" className="mt-5 inline-block text-sm font-semibold text-[#5B3FE0] underline">Report content →</Link>
           </div>
         </div>
       </section>
@@ -167,7 +167,7 @@ export default function HomePage() {
       {/* Free */}
       <section id="free" className="scroll-mt-20 bg-gray-50">
         <div className="mx-auto max-w-3xl px-5 py-20 text-center">
-          <h2 className="text-3xl font-bold md:text-4xl">Flixvault is Free</h2>
+          <h2 className="text-3xl font-bold md:text-4xl">Kinovault is Free</h2>
           <p className="mx-auto mt-3 max-w-xl text-gray-600">No plans and no payments. Download the app, log in and start.</p>
           <div className="mx-auto mt-10 max-w-md rounded-2xl border border-gray-200 bg-white p-7 text-left shadow-sm">
             <ul className="space-y-2">
@@ -189,7 +189,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 text-sm md:grid-cols-3">
           <div>
             <p className="mb-3 text-base font-semibold text-white">About</p>
-            <p className="italic text-white/90">Flixvault</p>
+            <p className="italic text-white/90">Kinovault</p>
             <p className="mt-1"><span className="underline">Email</span>: <a href={`mailto:${SUPPORT_EMAIL}`} className="hover:text-white">{SUPPORT_EMAIL}</a></p>
             <p className="mt-1">Secure cloud storage and creator channels.</p>
           </div>
@@ -211,7 +211,7 @@ export default function HomePage() {
           </div>
         </div>
         <p className="border-t border-white/10 py-5 text-center text-xs text-white/50">
-          Copyright ©{new Date().getFullYear()} Flixvault. All Rights Reserved.
+          Copyright ©{new Date().getFullYear()} Kinovault. All Rights Reserved.
         </p>
       </footer>
     </div>
