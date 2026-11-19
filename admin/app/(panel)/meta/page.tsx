@@ -126,7 +126,7 @@ export default async function MetaPage({
         )}
         {ready && !settings.apk_url && (
           <p className="mt-4 rounded bg-amber-50 px-3 py-2 text-sm text-amber-900">
-            One more thing before running ads: upload <b>Veltora-ads.apk</b> under <b>Download page and testing</b> below,
+            One more thing before running ads: upload <b>Kinovault-ads.apk</b> under <b>Download page and testing</b> below,
             so the download page has a file to give.
           </p>
         )}
@@ -169,7 +169,7 @@ export default async function MetaPage({
             </div>
             <label className="text-sm font-medium">
               Download page title
-              <Input name="page_title" defaultValue={settings.page_title ?? "Veltora"} maxLength={60} />
+              <Input name="page_title" defaultValue={settings.page_title ?? "Kinovault"} maxLength={60} />
             </label>
             <label className="text-sm font-medium">
               Download page text

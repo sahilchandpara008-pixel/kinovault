@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Veltora brand (same orange as the app: #7c5cff, dark #5b3fe0).
+/* Kinovault brand (same orange as the app: #7c5cff, dark #5b3fe0).
    700 is the accent on white (buttons, links): dark enough for white text.
    Red stays for destructive actions and errors only. */
 @theme {

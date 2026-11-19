@@ -12,7 +12,7 @@ export function ApkUpload({ defaultValue }: { defaultValue?: string | null }) {
   async function onFile(file: File | undefined) {
     if (!file) return;
     if (!file.name.toLowerCase().endsWith(".apk")) {
-      setStatus("Choose the .apk file (for ads use Veltora-ads.apk).");
+      setStatus("Choose the .apk file (for ads use Kinovault-ads.apk).");
       return;
     }
     if (file.size > 50 * 1024 * 1024) {
@@ -20,7 +20,7 @@ export function ApkUpload({ defaultValue }: { defaultValue?: string | null }) {
       return;
     }
     setStatus("Uploading… this can take a minute.");
-    const key = `Veltora-${new Date().toISOString().slice(0, 10)}-${crypto.randomUUID().slice(0, 8)}.apk`;
+    const key = `Kinovault-${new Date().toISOString().slice(0, 10)}-${crypto.randomUUID().slice(0, 8)}.apk`;
     const supabase = createClient();
     const { error } = await supabase.storage
       .from("downloads")

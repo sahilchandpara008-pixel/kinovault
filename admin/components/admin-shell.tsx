@@ -11,7 +11,7 @@ function Logo() {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/site/logo.png" alt="" width={36} height={36} className="h-9 w-9 rounded-xl" />
       <span>
-        Veltora
+        Kinovault
         <span className="block text-[10px] font-medium uppercase tracking-[.2em] text-brand-400">Admin</span>
       </span>
     </span>
@@ -64,7 +64,7 @@ export function AdminShell({
           <span className="hidden shrink-0 sm:block">{isOwner ? "Owner" : "Content admin"} · India · IST</span>
         </div>
         <main className="mx-auto max-w-6xl p-4 md:p-6 lg:py-8">{children}</main>
-        <footer className="mx-auto max-w-6xl px-4 pb-6 text-xs text-gray-400 md:px-6">Veltora admin</footer>
+        <footer className="mx-auto max-w-6xl px-4 pb-6 text-xs text-gray-400 md:px-6">Kinovault admin</footer>
       </div>
     </div>
   );

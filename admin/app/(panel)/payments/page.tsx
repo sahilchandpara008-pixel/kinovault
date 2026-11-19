@@ -728,7 +728,7 @@ export default async function PaymentsPage({ searchParams }: { searchParams: Pro
           <form action={savePlay.bind(null, back)} className="grid gap-3">
             <label className="text-sm">
               App package name
-              <Input name="package_name" defaultValue={play?.package_name ?? "com.veltora.app"} required />
+              <Input name="package_name" defaultValue={play?.package_name ?? "com.kinovault.app"} required />
             </label>
             <label className="flex items-center gap-2 text-sm">
               <input type="checkbox" name="enabled" defaultChecked={play?.enabled ?? false} /> Report Play Store

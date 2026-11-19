@@ -36,10 +36,10 @@ Functions -> Secrets), and ideally also as GitHub repository secrets so the
 
 | Secret | Value | Where to find it |
 |---|---|---|
-| `BUNNY_CLOUD_ZONE` | the storage zone's name (e.g. `veltora-cloud`) | Bunny dashboard -> Storage -> your zone |
+| `BUNNY_CLOUD_ZONE` | the storage zone's name (e.g. `kinovault-cloud`) | Bunny dashboard -> Storage -> your zone |
 | `BUNNY_CLOUD_PASSWORD` | the storage zone's password | Storage zone -> Access (FTP & API Access) |
 | `BUNNY_CLOUD_ENDPOINT` | the storage zone's region endpoint hostname (e.g. `sg.storage.bunnycdn.com`) | same page |
-| `BUNNY_CLOUD_HOST` | the connected Pull Zone's hostname (e.g. `veltora-cloud.b-cdn.net`) | CDN -> your pull zone |
+| `BUNNY_CLOUD_HOST` | the connected Pull Zone's hostname (e.g. `kinovault-cloud.b-cdn.net`) | CDN -> your pull zone |
 | `BUNNY_CLOUD_TOKEN_KEY` | the pull zone's Token Authentication Key | Pull zone -> Security -> Token authentication |
 
 On the Pull Zone's Security page: **Token authentication** must be **on**

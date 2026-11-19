@@ -19,7 +19,7 @@ export default async function LoginPage({
         <div className="mb-7 text-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/site/logo.png" alt="" width={56} height={56} className="mx-auto mb-3 h-14 w-14 rounded-2xl" />
-          <h1 className="text-xl font-semibold text-white">Veltora Admin</h1>
+          <h1 className="text-xl font-semibold text-white">Kinovault Admin</h1>
           <p className="mt-1 text-sm text-gray-400">Sign in to manage content and users</p>
         </div>
         <form action={signIn} className="space-y-4 rounded-2xl bg-white p-6 shadow-xl">
@@ -38,7 +38,7 @@ export default async function LoginPage({
             Sign in
           </Button>
         </form>
-        <p className="mt-6 text-center text-xs text-gray-500">For approved Veltora administrators only.</p>
+        <p className="mt-6 text-center text-xs text-gray-500">For approved Kinovault administrators only.</p>
       </div>
     </main>
   );

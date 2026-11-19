@@ -6,13 +6,13 @@ import { SUPPORT_EMAIL } from "@/lib/policies";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Veltora – Free Cloud Storage & Creator Channels",
+  title: "Kinovault – Free Cloud Storage & Creator Channels",
   description:
     "Simple, secure and swift. Back up photos, videos and documents in the cloud, share them, and watch creator channels.",
   robots: { index: true },
 };
 
-const PLAY_URL = "https://play.google.com/store/apps/details?id=com.veltora.app";
+const PLAY_URL = "https://play.google.com/store/apps/details?id=com.kinovault.app";
 
 const FREE = ["15 GB cloud storage", "Creator channels and videos", "Free trailers", "Upload & manage your own channel", "No ads, no payments"];
 
@@ -44,7 +44,7 @@ export default function HomePage() {
           <Link href="/" className="flex items-center gap-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/site/icon.png" alt="" width={34} height={34} className="h-[34px] w-[34px] rounded-lg" />
-            <span className="text-2xl font-extrabold tracking-tight text-[#7C5CFF]">Veltora</span>
+            <span className="text-2xl font-extrabold tracking-tight text-[#7C5CFF]">Kinovault</span>
           </Link>
           <nav className="ml-auto hidden items-center gap-7 text-sm font-medium text-gray-600 md:flex">
             <a href="#backup" className="hover:text-gray-900">Features</a>
@@ -116,7 +116,7 @@ export default function HomePage() {
       <section id="security" className="scroll-mt-20 bg-brand-50/60">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 md:grid-cols-2">
           <div className="order-2 md:order-1">
-            <h2 className="text-3xl font-bold md:text-4xl">Veltora Protects Your Data</h2>
+            <h2 className="text-3xl font-bold md:text-4xl">Kinovault Protects Your Data</h2>
             <p className="mt-4 text-lg leading-relaxed text-gray-600">
               We prioritise your privacy and data security. Every connection is encrypted, your cloud files are private to
               your account, and you stay in control — delete your account and data any time.
@@ -147,7 +147,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-5 py-20">
         <div className="grid items-center gap-10 md:grid-cols-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/site/1-explore.jpg" alt="Veltora channels" className="mx-auto w-56 rounded-[2rem] border-[6px] border-gray-900 shadow-2xl" />
+          <img src="/site/1-explore.jpg" alt="Kinovault channels" className="mx-auto w-56 rounded-[2rem] border-[6px] border-gray-900 shadow-2xl" />
           <div>
             <h2 className="text-3xl font-bold md:text-4xl">Channels &amp; Creator Content</h2>
             <p className="mt-4 text-lg leading-relaxed text-gray-600">
@@ -167,7 +167,7 @@ export default function HomePage() {
       {/* Free */}
       <section id="free" className="scroll-mt-20 bg-gray-50">
         <div className="mx-auto max-w-3xl px-5 py-20 text-center">
-          <h2 className="text-3xl font-bold md:text-4xl">Veltora is Free</h2>
+          <h2 className="text-3xl font-bold md:text-4xl">Kinovault is Free</h2>
           <p className="mx-auto mt-3 max-w-xl text-gray-600">No plans and no payments. Download the app, log in and start.</p>
           <div className="mx-auto mt-10 max-w-md rounded-2xl border border-gray-200 bg-white p-7 text-left shadow-sm">
             <ul className="space-y-2">
@@ -189,7 +189,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 text-sm md:grid-cols-3">
           <div>
             <p className="mb-3 text-base font-semibold text-white">About</p>
-            <p className="italic text-white/90">Veltora</p>
+            <p className="italic text-white/90">Kinovault</p>
             <p className="mt-1"><span className="underline">Email</span>: <a href={`mailto:${SUPPORT_EMAIL}`} className="hover:text-white">{SUPPORT_EMAIL}</a></p>
             <p className="mt-1">Secure cloud storage and creator channels.</p>
           </div>
@@ -211,7 +211,7 @@ export default function HomePage() {
           </div>
         </div>
         <p className="border-t border-white/10 py-5 text-center text-xs text-white/50">
-          Copyright ©{new Date().getFullYear()} Veltora. All Rights Reserved.
+          Copyright ©{new Date().getFullYear()} Kinovault. All Rights Reserved.
         </p>
       </footer>
     </div>

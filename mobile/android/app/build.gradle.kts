@@ -15,7 +15,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.veltora.direct"
+        applicationId = "com.kinovault.direct"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
@@ -48,10 +48,10 @@ android {
     productFlavors {
         create("direct") { dimension = "store" }
         // Play Store app id (permanent once uploaded). Shared APKs use
-        // com.veltora.direct so they update each other.
+        // com.kinovault.direct so they update each other.
         create("play") {
             dimension = "store"
-            applicationId = "com.veltora.app"
+            applicationId = "com.kinovault.app"
         }
     }
 
